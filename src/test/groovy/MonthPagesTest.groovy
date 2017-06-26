@@ -2,8 +2,8 @@ import geb.junit4.GebReportingTest
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
-import org.junit.runners.Parameterized;
-import org.junit.runners.Parameterized.Parameters;
+import org.junit.runners.Parameterized
+import org.junit.runners.Parameterized.Parameters
 
 
 @RunWith(Parameterized.class)
@@ -16,7 +16,7 @@ class MonthPagesTest extends GebReportingTest {
     public MonthPagesTest(String month){
         this.month = month
     }
-    public String month
+    String month
     
     @Test
     void testMonth() {

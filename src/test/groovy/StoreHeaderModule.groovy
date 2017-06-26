@@ -6,8 +6,11 @@ class ShoeStoreHeaderModule extends Module{
     static content = {
         nav  {module HeaderNavModule}
         allShoesLink {$("a", href:'/shoes')}
-        remindForm {$("form",action:'/remind')}
-        promoForm {$("form",action:'/promo')}
+        remindForm {$("form", action:'/remind')}
+        remindButton {remindForm.$("input", type:'submit')}
+        remindText {remindForm.$("input", name:'email')}
+
+        promoForm {$("form", action:'/promo')}
 
     }
     
