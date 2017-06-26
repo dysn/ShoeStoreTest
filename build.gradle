@@ -46,6 +46,8 @@ dependencies {
 
 drivers.each { driver ->
     task "${driver}Test"(type: Test) {
+        ignoreFailures = true
+
         reports {
             html.destination = reporting.file("$name/tests")
             junitXml.destination = file("$buildDir/test-results/$name")
@@ -76,8 +78,9 @@ chromeTest {
 }
 
 test {
+
     
-    dependsOn clean, drivers.collect{tasks["${it}Test"]}
+    dependsOn drivers.collect{tasks["${it}Test"]}
     enabled = false
 }
 
